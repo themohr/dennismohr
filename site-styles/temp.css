@@ -1,0 +1,20 @@
+@charset "utf-8";
+#wrapper {
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	padding: 0px;
+	width: 100%;
+	position: relative;
+	border: thin dotted rgb(102,102,102);
+	margin: 0px;
+}
+#logo {
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	background-image: url(../_css/_images/logo.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	width: 216px;
+}

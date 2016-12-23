@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Image Rotator</title>
+<style type="text/css">
+#rotator {
+	background-color: rgb(0,0,0);
+	margin: 0px;
+	padding: 0px;
+	position: relative;
+}
+#rotator #rotatorFeat {
+	margin: 0px;
+	padding: 0px;
+	width: 500px;
+	height: 261px;
+}
+#rotator #rotatorFeat ul {
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+#rotator #rotatorFeat ul li {
+	position: absolute;
+	margin: 0px;
+	padding: 0px;
+	width: 500px;
+}
+#rotator #rotatorFeat ul li .item {
+	margin: 0px;
+	padding: 0px;
+	z-index: 1;
+}
+#rotator #rotatorFeat .selected {
+    z-index: 2;
+}
+#rotator #rotatorFeat ul li img {
+	float: left;
+	margin: 0px;
+	padding: 0px;
+}
+#rotator #rotatorFeat .itemText {
+	position: absolute;
+	left: 0px;
+	top: 150px;
+	height: 42px;
+	width: 500px;
+	background-color: rgba(0,0,0,0.5);
+	color: rgb(255,255,255);
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: 900;
+	font-size: 1.5em;
+	text-align: center;
+	padding-top: 8px;
+}
+</style>
+<script src="../site-scripts/jquery-min-1.9.js" type="text/javascript"></script>
+<script>
+    $(function(){
+		setInterval("changeFeatAuto", 2000);
+	});
+	
+	function changeFeatAuto(){
+		
+		var selected = $("#rotatorFeat li.selected");
+		var next = selected.next();
+		if( next.length == 0 ){
+		    	next = $("#rotatorFeat li:first");
+		}
+		
+		
+	}
+    
+</script>
+
+</head>
+
+<body>
+
+<div id="rotator">
+    <div id="rotatorFeat">
+        <ul>
+            <li class="item selected">
+              <img src="../images/work/r-Beachwalk.png" width="500" height="261" alt="Featured Portfolio of Work" /><div class="itemText">Beachwalk Clothing &amp; Gifts</div>
+            </li>
+            <li class="item">
+              <img src="../images/work/r-ScottsRoofing.png" width="500" height="261" alt="Featured Portfolio of Work" /><div class="itemText">Scott's Roofing</div>
+          </li>
+            <li class="item">
+              <img src="../images/work/r-Carefree.png" width="500" height="261" alt="Featured Portfolio of Work" /><div class="itemText">Carefree Alpacas</div>
+            </li>
+            <li class="item">
+              <img src="../images/work/r-MiddleForkRV.png" width="500" height="261" alt="Featured Portfolio of Work" /><div class="itemText">Middlefork RV Resort</div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+</body>
+</html>

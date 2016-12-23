@@ -1,0 +1,212 @@
+@charset "utf-8";
+/* modules.css
+* Modules for scaleable, reusable CSS
+* Author: Dennis Mohr
+* 11.25.2013
+*/
+/* ***********************************
+* Base Options (variant from reset)
+*********************************** */
+body{
+	background: #EFEFEF;
+	font: 13px/1.5 'Helvetica Neue', Arial, 'Liberation Sans', FreeSans, sans-serif;	
+}
+pre,
+code {
+  font-family: 'DejaVu Sans Mono', Menlo, Consolas, monospace;
+}
+h1 {
+  font-size: 25px;
+}
+
+h2 {
+  font-size: 23px;
+}
+
+h3 {
+  font-size: 21px;
+}
+
+h4 {
+  font-size: 19px;
+}
+
+h5 {
+  font-size: 17px;
+}
+
+h6 {
+  font-size: 15px;
+}
+/* ***********************************
+* Layout options
+*********************************** */
+.fullwidth {
+    width: 100%;
+}
+.fullwidth-fixed {
+	position: fixed;
+	width: 100%;
+}
+.header {
+	padding: 0;
+	background: rgb(43,43,43); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(43,43,43,1) 0%, rgba(96,96,96,1) 96%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(43,43,43,1)), color-stop(96%,rgba(96,96,96,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(43,43,43,1) 0%,rgba(96,96,96,1) 96%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(43,43,43,1) 0%,rgba(96,96,96,1) 96%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(43,43,43,1) 0%,rgba(96,96,96,1) 96%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(43,43,43,1) 0%,rgba(96,96,96,1) 96%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2b2b2b', endColorstr='#606060',GradientType=0 ); /* IE6-9 */
+	box-shadow: 0px 2px 6px #000000;	
+}
+.footer {
+	padding: 10px 0 20px 0;
+	background: rgb(43,43,43); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(43,43,43,1) 0%, rgba(0,0,0,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(43,43,43,1)), color-stop(100%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(43,43,43,1) 0%,rgba(0,0,0,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(43,43,43,1) 0%,rgba(0,0,0,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(43,43,43,1) 0%,rgba(0,0,0,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(43,43,43,1) 0%,rgba(0,0,0,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2b2b2b', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+	box-shadow: inset 0px 2px 4px rgba(255,255,255,0.4);
+	border-top: 1px solid #333333;	
+}
+#footer_logo{
+	position: relative;
+}
+.main-content h1{
+	color: #999;
+	text-shadow: 0 1px 0 #000;
+}
+
+/* ***********************************
+* List Modules
+********************************** */
+/* General Horizontal List */
+.list-horizontal {
+	margin: 0;
+	padding: 0;
+}
+.list-horizontal ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;	
+}
+.list-horizontal li {
+	float: left;
+}
+.list-horizontal ul li a {
+	display: block;
+	text-align: center;	
+}
+
+/* Sub-modules for List Modules */
+.list-horizontal_main {
+	position: relative;
+	height: 50px;	
+}
+.list-horizontal_main ul li a{
+	line-height: 4.3em;
+	width: 112px;
+	color: rgb(0,153,255);
+	text-decoration: none;
+	font-size: 14px;
+}
+.list-horizontal_main ul li a:hover{
+	background: rgba(0,153,255,0.3);
+	color: #000;
+	box-shadow: inset 1px 1px 1px #333333;	
+}
+
+/* Vertical List */
+.list-vertical {
+	margin: 0;
+	padding: 0;
+}
+.list-vertical > ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+.list-vertical > ul > li {
+	margin: 0;
+	padding: 3px;
+}
+.list-vertical > ul > li > a{
+	display: block;
+}
+.list-vertical_footer > ul > li > a{
+	color: #999999;
+	font-size: 14px;
+	font-weight: bold;
+	text-decoration: none;
+	text-shadow: 0px -1px 0px #000;
+}
+.list-vertical_footer > ul > li > a:hover{
+	color: rgba(204,0,51,0.7);
+}
+
+.footer_mainCat {
+	display: block;
+	background: rgba(153,153,153,0.4);
+	border-radius: 5px;
+	box-shadow: inset 0 1px 1px #000;
+	-moz-box-shadow: inset 0 1px 1px #000;
+	-webkit-box-shadow: inset 0 1px 1px #000;
+	font-weight: bold;
+}
+
+/* ******************************************
+/* Specific Modules for brand and identity
+****************************************** */
+.logo {
+	position: absolute;
+	right: 0;
+	background: url(../_css/_images/logo-head.png) center center no-repeat;
+}
+
+/* ***************************************
+* Tools for one off adjustments
+*************************************** */
+/* Margin adjustments */
+.marLR-5 {
+	margin: 0 5px;
+}
+.marT-10 {
+	margin-top: 10px;
+}
+.marT-70 {
+	margin-top: 70px;
+}
+
+/* Font colors and backgrounds */
+.opaque-40 {
+	opacity: 0.4;
+}
+.reverse {
+	color: #999999;
+}
+
+/* ***************************************
+* STATE
+**************************************** */
+#body_home #primary_nav_home a,
+#body_html #primary_nav_html a,
+#body_css #primary_nav_css a,
+#body_javascript #primary_nav_javascript a,
+#body_serverside #primary_nav_serverside a {
+	background: rgba(204,0,51,0.4);	
+	box-shadow: inset 1px 1px 1px #000000;
+	-moz-box-shadow: inset 1px 1px 1px #000000;
+	-webkit-box-shadow: inset 1px 1px 1px #000000;	
+}
+
+#body_home #footer_nav_home a,
+#body_html #footer_nav_html a,
+#body_css #footer_nav_css a,
+#body_javascript #footer_nav_javascript a,
+#body_serverside #footer_nav_serverside a {
+	color: rgb(255,255,255);	
+}
